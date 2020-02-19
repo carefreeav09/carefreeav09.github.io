@@ -5,6 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Loading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loading/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +38,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Layout/Header" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\guidelines\src\components" />
       <recent name="D:\Projects\guidelines\src\containers\Home" />
@@ -85,5 +94,27 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1897" height="261" key="GridCell.Tab.0.bottom" timestamp="1582102124326">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="261" key="GridCell.Tab.0.bottom/0.27.1920.1009/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582102124326" />
+    <state width="1897" height="261" key="GridCell.Tab.0.center" timestamp="1582102124326">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="261" key="GridCell.Tab.0.center/0.27.1920.1009/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582102124326" />
+    <state width="1897" height="261" key="GridCell.Tab.0.left" timestamp="1582102124325">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="261" key="GridCell.Tab.0.left/0.27.1920.1009/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582102124325" />
+    <state width="1897" height="261" key="GridCell.Tab.0.right" timestamp="1582102124326">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="261" key="GridCell.Tab.0.right/0.27.1920.1009/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582102124326" />
+    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1582109094190">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup/0.27.1920.1009/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582109094190" />
   </component>
 </project>
