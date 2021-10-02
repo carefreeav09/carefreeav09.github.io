@@ -1,3 +1,5 @@
+@import url("./assets/css/utils.css");
+
 body {
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-  }
+  font-family: "Nunito Sans", sans-serif;
+}

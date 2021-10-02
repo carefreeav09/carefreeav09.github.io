@@ -1,6 +1,6 @@
 const light = {
   colors: {
-    background: "#ECEFF4",
+    background: "aliceblue",
     cardBackground: "#4a4747",
     buttonBackground: "#5E81AC",
     textColor: "#585757",

@@ -8,14 +8,34 @@ const ThemeContextProvider = (props) => {
   const [theme, setTheme] = React.useState("light");
   const appThemeContext = useContext(ThemeContext);
 
+  const [appLayout, setAppLayout] = React.useState({
+    size: "0px",
+    transparent: true,
+  });
+
+  const setSize = (size) => {
+    console.log(size, 'size inside set size');
+    setAppLayout({
+      ...appLayout,
+      size,
+    });
+  };
+
+  const setTransparency = (transparent) => {
+    setAppLayout({
+      ...appLayout,
+      transparent,
+    });
+  };
+
   const switchTheme = (theme) => {
     setTheme(theme);
   };
 
-  console.log(appThemeContext, "app theme context");
-
   return (
-    <AppThemeContext.Provider value={{theme, switchTheme}}>
+    <AppThemeContext.Provider
+      value={{ appLayout, theme, switchTheme, setSize, setTransparency }}
+    >
       {props.children}
     </AppThemeContext.Provider>
   );

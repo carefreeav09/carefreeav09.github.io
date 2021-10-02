@@ -7,8 +7,8 @@ import ThemeProvider from "./themes";
 import { ThemeContextProvider } from "./context/ThemeContext";
 
 import App from "./App";
-import Container from './components/Container';
 import reportWebVitals from "./reportWebVitals";
+import { Container } from "./components";
 
 ReactDOM.render(
   <React.StrictMode>
