@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/assets/css/utils.css","webpack://src/index.css"],"names":[],"mappings":"AAAA,gBACE,cACF,CCAA,KACE,oCACF","file":"main.dadc2707.chunk.css","sourcesContent":[".cursor-pointer {\r\n  cursor: pointer;\r\n}\r\n","@import url(\"./assets/css/utils.css\");\r\n\r\nbody {\r\n  font-family: \"Nunito Sans\", sans-serif;\r\n}\r\n"]}
