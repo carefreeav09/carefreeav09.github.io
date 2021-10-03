@@ -16,6 +16,7 @@ import {
   MDBDropdownLink,
 } from "mdb-react-ui-kit";
 
+import { Link } from "react-router-dom";
 import { AppThemeContext } from "../../context/ThemeContext";
 import Switch from "../Atoms/Switch";
 
@@ -96,7 +97,9 @@ const Navbar = ({
       dark={theme === "dark"}
     >
       <MDBContainer fluid={spacing === "fluid"}>
-        <MDBNavbarBrand>{title}</MDBNavbarBrand>
+        <MDBNavbarBrand>
+          <Link to={"/"}>{title}</Link>
+        </MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls="navbarSupportedContent"
@@ -127,17 +130,23 @@ const Navbar = ({
                           data-active="false"
                           onClick={dropdownItem?.onClick}
                         >
-                          <MDBDropdownLink className="cursor-pointer">
-                            {dropdownItem.name}
-                          </MDBDropdownLink>
+                          {dropdownItem?.link && (
+                            <Link to={dropdownItem?.link}>
+                              <MDBDropdownLink className="cursor-pointer">
+                                {dropdownItem.name}
+                              </MDBDropdownLink>
+                            </Link>
+                          )}
                         </MDBDropdownItem>
                       ))}
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 ) : (
-                  <MDBNavbarLink aria-current="page" href={navList.link}>
-                    {navList.name}
-                  </MDBNavbarLink>
+                  <Link to={navList.link}>
+                    <MDBNavbarLink aria-current="page">
+                      {navList.name}
+                    </MDBNavbarLink>
+                  </Link>
                 )}
               </MDBNavbarItem>
             ))}
@@ -167,17 +176,23 @@ const Navbar = ({
                           data-active="false"
                           onClick={dropdownItem?.onClick}
                         >
-                          <MDBDropdownLink className="cursor-pointer">
-                            {dropdownItem.name}
-                          </MDBDropdownLink>
+                          {dropdownItem?.link && (
+                            <Link to={dropdownItem?.link}>
+                              <MDBDropdownLink className="cursor-pointer">
+                                {dropdownItem.name}
+                              </MDBDropdownLink>
+                            </Link>
+                          )}
                         </MDBDropdownItem>
                       ))}
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 ) : (
-                  <MDBNavbarLink aria-current="page" href={navList.link}>
-                    {navList.name}
-                  </MDBNavbarLink>
+                  <Link to={navList.link}>
+                    <MDBNavbarLink aria-current="page" href={navList.link}>
+                      {navList.name}
+                    </MDBNavbarLink>
+                  </Link>
                 )}
               </MDBNavbarItem>
             ))}

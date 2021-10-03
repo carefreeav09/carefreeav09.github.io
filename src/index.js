@@ -1,24 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Router } from 'react-router-dom';
+
 import "./index.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import history from './utils/history';
 
 import ThemeProvider from "./themes";
 import { ThemeContextProvider } from "./context/ThemeContext";
 
-import App from "./App";
+import App from "./routes";
 import reportWebVitals from "./reportWebVitals";
 import { Container } from "./components";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeContextProvider>
-      <ThemeProvider>
-        <Container>
-          <App />
-        </Container>
-      </ThemeProvider>
-    </ThemeContextProvider>
+    <Router basename={process.env.PUBLIC_URL} history={history}>
+      <ThemeContextProvider>
+        <ThemeProvider>
+          <Container>
+            <App />
+          </Container>
+        </ThemeProvider>
+      </ThemeContextProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -14,7 +14,6 @@ const ThemeContextProvider = (props) => {
   });
 
   const setSize = (size) => {
-    console.log(size, 'size inside set size');
     setAppLayout({
       ...appLayout,
       size,
