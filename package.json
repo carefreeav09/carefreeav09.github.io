@@ -1,7 +1,6 @@
 {
   "name": "portfolio-app",
   "version": "0.1.0",
-  "homepage": "http://carefreeav09.github.io/carefreeav09.github.io",
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.15.0",
