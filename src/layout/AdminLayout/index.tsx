@@ -8,11 +8,11 @@ interface AdminLayoutProps {
 
 const AdminLayout = ({ children }: AdminLayoutProps) => {
   return (
-    <>
+    <div className="page-wrapper">
       <Header />
       <div className="container">{children}</div>
       <Footer />
-    </>
+    </div>
   );
 };
 

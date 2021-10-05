@@ -2,12 +2,13 @@ import React from "react";
 import { Footer } from "../../components";
 import { Link } from "react-router-dom";
 
-const MainFooter = () => {
+const MainFooter = (props: any) => {
   return (
     <Footer
       className={`text-center text-lg-start`}
       hasSocials
       socials={["facebook", "github", "twitter", "instagram"]}
+      style={props.style}
     >
       <section>
         <div className="container text-center text-md-start mt-5">

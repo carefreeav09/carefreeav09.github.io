@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DefaultText = () => {
+const HeroSection = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const DefaultText = () => {
     )
 }
 
-export default DefaultText
+export default HeroSection

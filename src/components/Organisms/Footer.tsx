@@ -12,11 +12,18 @@ interface IFooterProps {
   className?: string;
   hasSocials?: boolean;
   socials: string[];
+  style?: React.CSSProperties;
 }
 
-const Footer = ({ children, className, hasSocials, socials }: IFooterProps) => {
+const Footer = ({
+  children,
+  className,
+  hasSocials,
+  socials,
+  style,
+}: IFooterProps) => {
   return (
-    <FooterDOM className={className}>
+    <FooterDOM className={className} style={style}>
       {hasSocials && (
         <Social
           facebook={socials.includes("facebook")}

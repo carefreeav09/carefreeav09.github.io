@@ -1,0 +1,15 @@
+.carefreeav-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+.carefreeav-page-content {
+  padding-bottom: 2.5rem;
+}
+
+.carefreeav-page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
