@@ -2,10 +2,10 @@ import React from "react";
 import { withRouter, Switch } from "react-router";
 import loadable from "@loadable/component";
 
-import Private from "./Private";
+// import Private from "./Private";
 import Public from "./Public";
 
-import AdminLayout from "../layout/AdminLayout";
+// import AdminLayout from "../layout/AdminLayout";
 import PublicLayout from "../layout/Public";
 
 const AsyncHome = loadable(() => import("../pages/Home"));
