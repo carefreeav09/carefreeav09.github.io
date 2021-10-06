@@ -97,9 +97,9 @@ const Navbar = ({
       dark={theme === "dark"}
     >
       <MDBContainer fluid={spacing === "fluid"}>
-        <MDBNavbarBrand>
-          <Link to={"/"}>{title}</Link>
-        </MDBNavbarBrand>
+        <Link to={"/"} className="nav-link cursor-pointer">
+          <MDBNavbarBrand>{title}</MDBNavbarBrand>
+        </Link>
 
         <MDBNavbarToggler
           aria-controls="navbarSupportedContent"

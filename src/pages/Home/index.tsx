@@ -1,5 +1,5 @@
 import React from "react";
-import { TextDefault } from "../../components";
+import HeroSection from "./Hero";
 
 const Home = () => {
   return (
@@ -13,11 +13,7 @@ const Home = () => {
       }}
     >
       <div>
-        <TextDefault className="display-1" as="div">Hi I'm Aabhushan Gautam</TextDefault>
-
-        <TextDefault className="h2-1" as="div">
-          Building this page, one item at a time.
-        </TextDefault>
+        <HeroSection />
       </div>
     </section>
   );

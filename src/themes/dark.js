@@ -8,8 +8,8 @@ const dark = {
     titleColor: '#FFFFFF',
     mutedColor: '#FFFFFF50',
     borderColor: '#E0E0E0',
-    footerBackground: '#f9f9f9',
-    footerTextColor: "#333333",
+    footerBackground: '#EBF4F6',
+    footerTextColor: "#1c2540",
   },
 };
 

@@ -75,17 +75,17 @@ const MainFooter = (props: any) => {
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
               <p>
-                <i className="fas fa-home me-3" /> New York, NY 10012, US
+                <i className="fas fa-home me-3" /> Kathmandu, Nepal
               </p>
               <p>
                 <i className="fas fa-envelope me-3" />
-                info@example.com
+                carefreeav09@gmail.com
               </p>
               <p>
-                <i className="fas fa-phone me-3" /> + 01 234 567 88
+                <i className="fas fa-phone me-3" /> 9861551591
               </p>
               <p>
-                <i className="fas fa-print me-3" /> + 01 234 567 89
+                <i className="fas fa-print me-3" /> 9842409030
               </p>
             </div>
           </div>
