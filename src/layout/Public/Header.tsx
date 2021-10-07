@@ -8,7 +8,20 @@ const Header = () => {
       size="md"
       transparent
       spacing="container"
-      navLists={[]}
+      navLists={[
+        {
+          name: "Components",
+          link: "/components",
+        },
+        {
+          name: "Blog",
+          link: "/blog",
+        },
+        {
+          name: "Contact Me",
+          link: "/contact"
+        }
+      ]}
     />
   );
 };
