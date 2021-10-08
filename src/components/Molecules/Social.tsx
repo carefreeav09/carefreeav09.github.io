@@ -17,15 +17,33 @@ interface ISocialProfiles {
   linkedin?: boolean;
   github?: boolean;
   youtube?: boolean;
+  showMessage?: boolean;
+  position?: string;
 }
 
 const Social = (props: ISocialProfiles) => {
-  const { facebook, twitter, instagram, linkedin, github, youtube } = props;
+  const {
+    facebook,
+    twitter,
+    instagram,
+    linkedin,
+    github,
+    youtube,
+    showMessage,
+    position,
+  } = props;
   return (
-    <section className="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <div className="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
+    <section
+      className={`container d-flex justify-content-center justify-content-lg-between p-4`}
+    >
+      {showMessage ? (
+        <div className="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+      ) : (
+        <div> </div>
+      )}
+
       <div>
         {facebook && (
           <a
@@ -93,8 +111,14 @@ const Social = (props: ISocialProfiles) => {
           </a>
         )}
       </div>
+
+      {position === "center" && <div></div>}
     </section>
   );
 };
 
 export default Social;
+
+Social.defaultProps = {
+  showMessage: true,
+};
