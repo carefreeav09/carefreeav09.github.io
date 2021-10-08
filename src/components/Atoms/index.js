@@ -7,6 +7,7 @@ import {
 } from "./Texts";
 import Title from "./Title";
 import EmptySpace from './Spacer';
+import Code from "./Code";
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   TextDefault,
   Title,
   EmptySpace,
+  Code
 };

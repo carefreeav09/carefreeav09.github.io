@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-lg-12 col-sm-8">
-            <div className="mt-4 mb-5">
+            <div className="mt-4 mb-3">
               <img
                 src={aabhushan}
                 className="rounded-circle img-thumbnail image-lg border-gray-300 p-2"
@@ -15,7 +15,7 @@ const HeroSection = () => {
                 height="150"
                 width="150"
               />
-              <TextDefault as="h1" className="display-4 fw-normal my-4">
+              <TextDefault as="h1" className="display-4 fw-normal mb-2">
                 Hello, I’m <span className="fw-bold">Aabhushan Gautam</span>
               </TextDefault>
               <TextDefault as="h5" className="fw-normal text-gray">

@@ -1,4 +1,4 @@
 import Social from "./Social";
-import Title from "./Title";
+import TitleDefault from "./TitleDefault";
 
-export { Social, Title };
+export { Social, TitleDefault };
