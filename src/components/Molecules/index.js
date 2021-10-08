@@ -1,3 +1,4 @@
 import Social from "./Social";
+import Title from "./Title";
 
-export { Social };
+export { Social, Title };

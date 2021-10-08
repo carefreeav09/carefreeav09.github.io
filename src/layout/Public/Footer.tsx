@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const MainFooter = (props: any) => {
   return (
     <Footer
-      className={`text-center text-lg-start`}
+      className={`carefreeav-page-footer text-center text-lg-start`}
       hasSocials
       socials={["facebook", "github", "twitter", "instagram"]}
       style={props.style}

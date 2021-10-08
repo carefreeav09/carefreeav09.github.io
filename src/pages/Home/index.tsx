@@ -12,9 +12,7 @@ const Home = () => {
         width: "100vw",
       }}
     >
-      <div>
-        <HeroSection />
-      </div>
+      <HeroSection />
     </section>
   );
 };

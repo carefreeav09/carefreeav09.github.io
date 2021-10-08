@@ -4,10 +4,9 @@ import Container from "./Container";
 import Switch from "./Switch";
 import {
   TextDefault,
-  MutedText,
-  SecondaryText,
 } from "./Texts";
 import Title from "./Title";
+import EmptySpace from './Spacer';
 
 export {
   Button,
@@ -15,7 +14,6 @@ export {
   Container,
   Switch,
   TextDefault,
-  MutedText,
-  SecondaryText,
   Title,
+  EmptySpace,
 };
