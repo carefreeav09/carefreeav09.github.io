@@ -1,5 +1,5 @@
 import React from "react";
-import { EmptySpace, TextDefault, TitleDefault } from "../../components";
+import { EmptySpace, TextDefault } from "../../components";
 import Typography from "./Typography";
 
 const Components = () => {
