@@ -18,8 +18,6 @@ const Components = () => {
 
       <hr />
 
-      <TitleDefault className="fw-bolder display-5" >Typography</TitleDefault>
-
       <EmptySpace height={20} />
 
       <Typography />

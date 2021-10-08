@@ -16,58 +16,42 @@ const MainFooter = (props: any) => {
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
                 <i className="fas fa-gem me-3" />
-                Company name
+                CarefreeAV
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
+                React JS developer from Nepal with ADHD. I am a passionate about
+                doing frontend things.
               </p>
             </div>
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-              <p>
+              {/* <p>
                 <Link to={""} className="text-reset">
                   Angular
                 </Link>
-              </p>
-              <p>
-                <Link to={""} className="text-reset">
-                  React
-                </Link>
-              </p>
-              <p>
-                <Link to={""} className="text-reset">
-                  Vue
-                </Link>
-              </p>
-              <p>
-                <Link to={""} className="text-reset">
-                  Laravel
-                </Link>
-              </p>
+              </p> */}
             </div>
 
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
               <p>
-                <Link to={""} className="text-reset">
-                  Pricing
+                <Link to={"/components"} className="text-reset">
+                  Components
                 </Link>
               </p>
               <p>
-                <Link to={""} className="text-reset">
-                  Settings
+                <Link to={"/about"} className="text-reset">
+                  About Me
                 </Link>
               </p>
               <p>
-                <Link to={""} className="text-reset">
-                  Orders
+                <Link to={"/blogs"} className="text-reset">
+                  Blogs
                 </Link>
               </p>
               <p>
-                <Link to={""} className="text-reset">
-                  Help
+                <Link to={"/contact"} className="text-reset">
+                  Contact Me
                 </Link>
               </p>
             </div>
