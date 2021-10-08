@@ -9,7 +9,6 @@ const Main = ({ children }) => {
   return (
     <div className="carefreeav-page-wrapper">
       <div className="carefreeav-page-content">
-        {console.log(appLayout.size, 'size')}
         <Header />
         <section
           id="body"

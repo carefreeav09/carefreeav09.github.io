@@ -8,7 +8,7 @@ const Home = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "80vh",
+        height: "90vh",
         width: "100vw",
       }}
     >

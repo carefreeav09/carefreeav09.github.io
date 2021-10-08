@@ -31,6 +31,7 @@ const HeroSection = () => {
               twitter
               showMessage={false}
               position="center"
+              classNames="p-0 mt-0"
             />
           </div>
         </div>

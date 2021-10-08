@@ -19,6 +19,7 @@ interface ISocialProfiles {
   youtube?: boolean;
   showMessage?: boolean;
   position?: string;
+  classNames?: string;
 }
 
 const Social = (props: ISocialProfiles) => {
@@ -31,10 +32,11 @@ const Social = (props: ISocialProfiles) => {
     youtube,
     showMessage,
     position,
+    classNames,
   } = props;
   return (
     <section
-      className={`container d-flex justify-content-center justify-content-lg-between p-4`}
+      className={`container d-flex justify-content-center justify-content-lg-between ${classNames}`}
     >
       {showMessage ? (
         <div className="me-5 d-none d-lg-block">
@@ -121,4 +123,5 @@ export default Social;
 
 Social.defaultProps = {
   showMessage: true,
+  classNames: "p-4",
 };

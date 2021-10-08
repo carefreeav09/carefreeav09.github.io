@@ -3,3 +3,9 @@
 body {
   font-family: "Nunito Sans", sans-serif !important;
 }
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
