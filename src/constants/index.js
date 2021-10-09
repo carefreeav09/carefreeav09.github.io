@@ -1,5 +1,4 @@
-export const API_URL = `${process.env.REACT_APP_REST_API_HOST}`;
-export const API_URL_SUBSCRIPTION = `${process.env.REACT_APP_REST_API_SUBSCRIPTION}`;
+export const API_URL = `${process.env.REACT_APP_WORDPRESS_API_ENDPOINT}`;
 export const JWT_TOKEN = 'carefreeav-web-token';
 
 export const FACEBOOK_URL = "https://www.facebook.com/Avusann/";
