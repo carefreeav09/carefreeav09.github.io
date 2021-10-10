@@ -6,7 +6,6 @@ const Blog = () => {
   const [posts, setPosts] = React.useState([]);
   React.useEffect(() => {
     const fetchedData = fetchAllPosts();
-    console.log(fetchedData, "fetched data");
     fetchedData.then((data) => {
       setPosts(data);
     });

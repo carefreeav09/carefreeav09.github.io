@@ -1,21 +1,4 @@
 import React from "react";
-import {
-  MDBNavbar,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarToggler,
-  MDBContainer,
-  MDBIcon,
-  MDBCollapse,
-  MDBNavbarLink,
-  MDBNavbarBrand,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
-  MDBDropdownLink,
-} from "mdb-react-ui-kit";
-
 import { Link } from "react-router-dom";
 import { AppThemeContext } from "../../context/ThemeContext";
 import Switch from "../Atoms/Switch";
@@ -31,7 +14,7 @@ interface INavLists {
 
 interface NavbarProps {
   title: string | React.ReactElement;
-  transparent: boolean;
+  transparent?: boolean;
   spacing: "container" | "fluid";
   navLists?: INavLists[];
   navListsRight?: INavLists[];
@@ -81,7 +64,9 @@ const Navbar = ({
   }, [transparent]);
 
   let navbarStyles = {
-    backgroundColor: transparent && "transparent",
+    backgroundColor: transparent
+      ? "transparent"
+      : theme?.colors?.backgroundColor,
     boxShadow: transparent
       ? "0 0 transparent"
       : "0 4px 12px 0 rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 5%)",
@@ -89,112 +74,112 @@ const Navbar = ({
   };
 
   return (
-    <MDBNavbar
-      fixed={fixed}
-      expand={"lg"}
+    <nav
+      className={`navbar navbar-expand-lg ${
+        theme === "light" ? "navbar-light" : "navbar-dark"
+      }`}
       style={navbarStyles}
-      light={theme === "light"}
-      dark={theme === "dark"}
     >
-      <MDBContainer fluid={spacing === "fluid"}>
+      <div
+        className={spacing === "container" ? "container" : "container-fluid"}
+      >
         <Link to={"/"} className="nav-link cursor-pointer">
-          <MDBNavbarBrand>{title}</MDBNavbarBrand>
+          <div className="navbar-brand">{title}</div>
         </Link>
 
-        <MDBNavbarToggler
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onClick={() => setShowBasic(!showBasic)}
         >
-          <MDBIcon icon="bars" fas />
-        </MDBNavbarToggler>
+          <i className="fas fa-bars"></i>
+        </button>
 
-        <MDBCollapse navbar show={showBasic}>
-          <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {navLists?.map((navList, index) => (
-              <MDBNavbarItem key={index}>
+              <li
+                key={index}
+                className={`nav-item ${navList.dropdown ? "dropdown" : ""}`}
+              >
                 {navList.dropdown ? (
-                  <MDBDropdown>
-                    <MDBDropdownToggle
-                      tag="a"
-                      className="nav-link cursor-pointer"
+                  <span className="nav-link cursor-pointer p-0">
+                    <span
+                      className={"nav-link dropdown-toggle"}
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
                     >
                       {navList.name}
-                    </MDBDropdownToggle>
-                    <MDBDropdownMenu>
+                    </span>
+                    <ul
+                      className="dropdown-menu"
+                      aria-labelledby="navbarDropdown"
+                    >
                       {navList?.dropdownItems?.map((dropdownItem, dIndex) => (
-                        <MDBDropdownItem
-                          href={dropdownItem?.link}
-                          key={dIndex}
-                          data-active="false"
-                          onClick={dropdownItem?.onClick}
-                        >
-                          {dropdownItem?.link && (
-                            <Link to={dropdownItem?.link}>
-                              <MDBDropdownLink className="cursor-pointer">
-                                {dropdownItem.name}
-                              </MDBDropdownLink>
-                            </Link>
-                          )}
-                        </MDBDropdownItem>
+                        <li onClick={dropdownItem?.onClick}>
+                          <Link
+                            className="dropdown-item"
+                            to={dropdownItem.link}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        </li>
                       ))}
-                    </MDBDropdownMenu>
-                  </MDBDropdown>
+                    </ul>
+                  </span>
                 ) : (
-                  <Link to={navList.link}>
-                    <MDBNavbarLink aria-current="page">
-                      {navList.name}
-                    </MDBNavbarLink>
+                  <Link to={navList.link} className="nav-link">
+                    {navList.name}
                   </Link>
                 )}
-              </MDBNavbarItem>
+              </li>
             ))}
-          </MDBNavbarNav>
-
-          <MDBNavbarNav
-            className="ml-auto mb-2 mb-lg-0"
-            style={{
-              justifyContent: "flex-end",
-            }}
-          >
+          </ul>
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             {navListsRight?.map((navList, index) => (
-              <MDBNavbarItem key={index}>
+              <li
+                key={index}
+                className={`nav-item ${navList.dropdown ? "dropdown" : ""}`}
+              >
                 {navList.dropdown ? (
-                  <MDBDropdown>
-                    <MDBDropdownToggle
-                      tag="a"
-                      className="nav-link cursor-pointer"
+                  <span className="nav-link cursor-pointer p-0">
+                    <span
+                      className={"nav-link dropdown-toggle"}
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
                     >
                       {navList.name}
-                    </MDBDropdownToggle>
-                    <MDBDropdownMenu>
+                    </span>
+                    <ul
+                      className="dropdown-menu"
+                      aria-labelledby="navbarDropdown"
+                    >
                       {navList?.dropdownItems?.map((dropdownItem, dIndex) => (
-                        <MDBDropdownItem
-                          href={dropdownItem?.link}
-                          key={dIndex}
-                          data-active="false"
-                          onClick={dropdownItem?.onClick}
-                        >
-                          {dropdownItem?.link && (
-                            <Link to={dropdownItem?.link}>
-                              <MDBDropdownLink className="cursor-pointer">
-                                {dropdownItem.name}
-                              </MDBDropdownLink>
-                            </Link>
-                          )}
-                        </MDBDropdownItem>
+                        <li onClick={dropdownItem?.onClick}>
+                          <Link
+                            className="dropdown-item"
+                            to={dropdownItem.link}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        </li>
                       ))}
-                    </MDBDropdownMenu>
-                  </MDBDropdown>
+                    </ul>
+                  </span>
                 ) : (
-                  <Link to={navList.link}>
-                    <MDBNavbarLink aria-current="page" href={navList.link}>
-                      {navList.name}
-                    </MDBNavbarLink>
+                  <Link to={navList.link} className="nav-link">
+                    {navList.name}
                   </Link>
                 )}
-              </MDBNavbarItem>
+              </li>
             ))}
 
             <div className="d-flex input-group w-auto mt-1">
@@ -204,18 +189,11 @@ const Navbar = ({
                 falseValue="light"
               />
             </div>
-          </MDBNavbarNav>
-        </MDBCollapse>
-      </MDBContainer>
-    </MDBNavbar>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 
 export default Navbar;
-
-Navbar.defaultProps = {
-  size: "lg",
-  transparent: false,
-  spacing: "container",
-  brand: "Navbar",
-};

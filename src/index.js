@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Router } from 'react-router-dom';
-
-import "mdb-ui-kit";
+import "bootstrap";
 import "./index.css";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import history from './utils/history';
 
 import ThemeProvider from "./themes";

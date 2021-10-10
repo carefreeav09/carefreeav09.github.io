@@ -19,8 +19,23 @@ const Header = () => {
         },
         {
           name: "Contact Me",
-          link: "/contact"
-        }
+          link: "/contact",
+        },
+        {
+          name: "Dropdown Text",
+          link: "dropdownText",
+          dropdown: true,
+          dropdownItems: [
+            {
+              name: "Dropdown Item 1",
+              link: "dropdownItem1",
+            },
+            {
+              name: "Dropdown Item 2",
+              link: "dropdownItem2",
+            },
+          ],
+        },
       ]}
     />
   );
