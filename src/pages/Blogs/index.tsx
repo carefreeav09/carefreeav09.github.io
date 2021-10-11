@@ -1,5 +1,5 @@
 import React from "react";
-import { EmptySpace } from "../../components";
+import { EmptySpace, Button } from "../../components";
 import { fetchAllPosts } from "../../services/posts";
 
 const Blog = () => {
@@ -17,6 +17,7 @@ const Blog = () => {
       {posts?.map((post: any) => (
         <div key={post.id}>{post.title.rendered}</div>
       ))}
+      <Button className="fw-bold me-5 ms-5">Hello</Button>
     </div>
   );
 };

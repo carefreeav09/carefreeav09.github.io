@@ -35,7 +35,6 @@ const Navbar = ({
 }: NavbarProps) => {
   const { setTransparency, setSize, switchTheme, theme } =
     React.useContext(AppThemeContext);
-  const [showBasic, setShowBasic] = React.useState(false);
 
   const getNavSize = () => {
     switch (size) {
