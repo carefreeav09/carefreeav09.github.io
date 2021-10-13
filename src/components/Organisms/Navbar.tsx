@@ -121,7 +121,7 @@ const Navbar = ({
                       aria-labelledby="navbarDropdown"
                     >
                       {navList?.dropdownItems?.map((dropdownItem, dIndex) => (
-                        <li onClick={dropdownItem?.onClick}>
+                        <li onClick={dropdownItem?.onClick} key={dIndex}>
                           <Link
                             className="dropdown-item"
                             to={dropdownItem.link}
@@ -162,7 +162,7 @@ const Navbar = ({
                       aria-labelledby="navbarDropdown"
                     >
                       {navList?.dropdownItems?.map((dropdownItem, dIndex) => (
-                        <li onClick={dropdownItem?.onClick}>
+                        <li onClick={dropdownItem?.onClick} key={dIndex}>
                           <Link
                             className="dropdown-item"
                             to={dropdownItem.link}

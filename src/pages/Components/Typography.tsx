@@ -22,8 +22,8 @@ const Typography = () => {
         <TextDefault
           as="p"
           className="fw-bold"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#textDefault-additionalProperties"
+          data-bs-toggle="collapse"
+          data-bs-target="#textDefault-additionalProperties"
           aria-expanded="false"
           aria-controls="textDefault-additionalProperties"
         >
@@ -90,8 +90,8 @@ const Typography = () => {
         <TextDefault
           as="p"
           className="fw-bold"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#textDefault-examples"
+          data-bs-toggle="collapse"
+          data-bs-target="#textDefault-examples"
           aria-expanded="false"
           aria-controls="textDefault-examples"
         >
