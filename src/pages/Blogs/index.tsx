@@ -1,6 +1,10 @@
 import React from "react";
-import { EmptySpace, Card } from "../../components";
+import { EmptySpace, Card, TextDefault, Button } from "../../components";
 import { fetchAllPosts } from "../../services/posts";
+import ReactHtmlParser from "react-html-parser";
+
+import { Link } from "react-router-dom";
+import "./styles.css";
 
 const Blog = () => {
   const [posts, setPosts] = React.useState([]);
@@ -11,38 +15,28 @@ const Blog = () => {
     });
   }, []);
 
+  const handleExcerpt = (excerpt: string): string => {
+    return excerpt.substring(0, 200) + " ...";
+  };
+
   return (
     <div>
       <EmptySpace height={100} />
       <div className="container">
-        <div className="row g-0">
+        <div className="row g-0 blog-grids">
           {posts?.map((post: any) => (
-            <Card key={post.id}>
-              <div className="col-4">
-                <img
-                  src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg"
-                  alt="..."
-                  className="img-fluid rounded-start"
-                  style={{
-                    height: "250px",
-                  }}
-                />
-              </div>
-              <div className="col-12">
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <p className="card-text">
-                    <small className="text-muted">
-                      Last updated 3 mins ago
-                    </small>
-                  </p>
-                </div>
-              </div>
+            <Card image={post.jetpack_featured_media_url}>
+              <TextDefault as="h3" background="transparent">
+                {ReactHtmlParser(post.title.rendered)}
+              </TextDefault>
+              <TextDefault as="p" background="transparent">
+                {ReactHtmlParser(handleExcerpt(post.excerpt.rendered))}
+              </TextDefault>
+              <Link to={`/blog/${post.id}/${post.slug}`}>
+                <Button roundedOutline type="button" buttonType="secondary">
+                  Read More
+                </Button>
+              </Link>
             </Card>
           ))}
         </div>

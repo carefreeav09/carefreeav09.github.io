@@ -4,6 +4,8 @@ import styled from "styled-components";
 interface ICard {
   children: React.ReactNode;
   className?: string;
+  image?: any;
+  transparent?: boolean
 }
 
 const StyledCard = styled.div`
@@ -30,12 +32,18 @@ const StyledCard = styled.div`
   }
 `;
 
-const Card = ({ children, className }: ICard) => {
+const Card = ({ children, className, image, transparent }: ICard) => {
   return (
     <StyledCard className={`card ${className}`}>
+      {image && <img src={image} alt="Snow" />}
       <div className="card-body">{children}</div>
     </StyledCard>
   );
+};
+
+Card.defaultProps = {
+  image: null,
+  transparent: false,
 };
 
 export default Card;

@@ -8,6 +8,7 @@ import {
 import Title from "./Title";
 import EmptySpace from './Spacer';
 import Code from "./Code";
+import ImageCard from './ImageCard.tsx';
 
 export {
   Button,
@@ -17,5 +18,6 @@ export {
   TextDefault,
   Title,
   EmptySpace,
-  Code
+  Code,
+  ImageCard
 };

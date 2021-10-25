@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter, Switch } from "react-router";
+import { withRouter, Switch, Route } from "react-router";
 import loadable from "@loadable/component";
 
 // import Private from "./Private";
@@ -12,6 +12,8 @@ const AsyncHome = loadable(() => import("../pages/Home"));
 const AsyncAbout = loadable(() => import("../pages/About"));
 const AsyncComponents = loadable(() => import("../pages/Components"));
 const AsyncBlogs = loadable(() => import("../pages/Blogs"));
+const AsyncBlogIndividual = loadable(() => import("../pages/Blogs/Individual"));
+const NotFound = loadable(() => import("../pages/NotFound"));
 
 const App = () => {
   return (
@@ -30,11 +32,20 @@ const App = () => {
         layout={PublicLayout}
       />
       <Public
-        path="/blog"
+        path="/blogs"
         exact
         component={AsyncBlogs}
         layout={PublicLayout}
       />
+
+      <Public
+        path={`/blog/:id/:slug`}
+        exact
+        component={AsyncBlogIndividual}
+        layout={PublicLayout}
+      />
+
+      <Route path="*" component={NotFound} />
     </Switch>
   );
 };

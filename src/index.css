@@ -1,5 +1,9 @@
 @import url("./assets/css/utils.css");
 
+:root {
+  --bs-secondary: #2e4965;
+}
+
 body {
   font-family: "Nunito Sans", sans-serif !important;
 }
