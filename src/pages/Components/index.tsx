@@ -1,6 +1,7 @@
 import React from "react";
 import { EmptySpace, TextDefault } from "../../components";
 import Typography from "./Typography";
+import Container from "./Container";
 
 const Components = () => {
   return (
@@ -21,6 +22,10 @@ const Components = () => {
       <EmptySpace height={20} />
 
       <Typography />
+
+      <hr />
+
+      <Container />
     </div>
   );
 };

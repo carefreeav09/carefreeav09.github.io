@@ -40,14 +40,14 @@ const SwitchDOM = styled.label`
   }
 
   & input + .slider {
-    background-image: url("${sun}");
+    background-image: url("${moon}");
     background-size: contain, 5px 5px;
     background-repeat: no-repeat;
     background-position: right;
   }
 
   & input:checked + .slider {
-    background-image: url("${moon}");
+    background-image: url("${sun}");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;

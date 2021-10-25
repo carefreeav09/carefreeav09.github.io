@@ -1,12 +1,10 @@
 // create a react context for theme
 import React from "react";
-// import ThemeContext from "styled-components";
 
 const AppThemeContext = React.createContext();
 
 const ThemeContextProvider = (props) => {
-  const [theme, setTheme] = React.useState("light");
-  // const appThemeContext = useContext(ThemeContext);
+  const [theme, setTheme] = React.useState("dark");
 
   const [appLayout, setAppLayout] = React.useState({
     size: "0px",
