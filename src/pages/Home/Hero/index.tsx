@@ -1,8 +1,16 @@
-import { TextDefault, Social, Section } from "../../../components";
+import {
+  TextDefault,
+  Social,
+  Section,
+  SecondaryText,
+} from "../../../components";
 
 const HeroSection = () => {
   return (
-    <Section className="container pb-0 d-flex justify-content-center" minHeight="70vh">
+    <Section
+      className="container pb-0 d-flex justify-content-center"
+      minHeight="90vh"
+    >
       <div className="mt-4 mb-3 d-flex justify-content-center align-items-center">
         <div>
           <Social
@@ -20,7 +28,8 @@ const HeroSection = () => {
             I’m <span className="fw-bold">Aabhushan Gautam</span>
           </TextDefault>
           <TextDefault as="h4" className="fw-light text-muted">
-            React JS Developer at <span className="fw-bold">KOTUKO SRL</span>
+            React JS Developer at{" "}
+            <SecondaryText className="fw-bold">KOTUKO SRL</SecondaryText>
           </TextDefault>
         </div>
       </div>

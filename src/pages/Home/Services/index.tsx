@@ -4,6 +4,7 @@ import {
   Section,
   Card,
   Button,
+  Seperator,
 } from "../../../components";
 
 const Services = () => {
@@ -30,7 +31,7 @@ const Services = () => {
           using current best practices.
         </TextDefault>
 
-        <span className="w-25" />
+        <Seperator />
 
         <div className="container d-grid grid-template-3x mt-5">
           <Card className="card">
@@ -53,6 +54,7 @@ const Services = () => {
                 background="#FF4A57"
                 buttonType="secondary"
                 className="button-portfolio-secondary"
+                padding="0.5 1rem"
               >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
@@ -79,6 +81,7 @@ const Services = () => {
                 background="#FF4A57"
                 buttonType="secondary"
                 className="button-portfolio-secondary"
+                padding="0.5 1rem"
               >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
@@ -105,6 +108,7 @@ const Services = () => {
                 background="#FF4A57"
                 buttonType="secondary"
                 className="button-portfolio-secondary"
+                padding="0.5 1rem"
               >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
@@ -118,7 +122,7 @@ const Services = () => {
               </SecondaryText>
 
               <TextDefault as="h4" className="fw-bold mt-4">
-                CSS3 / SASS / UI Library
+                CSS3 / UI Library
               </TextDefault>
 
               <TextDefault as="p" className="text-small mt-4 mb-4">
@@ -131,6 +135,7 @@ const Services = () => {
                 background="#FF4A57"
                 buttonType="secondary"
                 className="button-portfolio-secondary"
+                padding="0.5 1rem"
               >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
@@ -157,6 +162,7 @@ const Services = () => {
                 background="#FF4A57"
                 buttonType="secondary"
                 className="button-portfolio-secondary"
+                padding="0.5 1rem"
               >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
@@ -183,6 +189,7 @@ const Services = () => {
                 background="#FF4A57"
                 buttonType="secondary"
                 className="button-portfolio-secondary"
+                padding="0.5 1rem"
               >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
