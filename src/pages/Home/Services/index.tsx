@@ -34,7 +34,7 @@ const Services = () => {
 
         <div className="container d-grid grid-template-3x mt-5">
           <Card className="card">
-            <div className="card-body text-start">
+            <div className="card-body text-start p-5">
               <SecondaryText as="span" fontSize="48px" className="fw-bold">
                 <i className="fab fa-react" />
               </SecondaryText>
@@ -48,20 +48,25 @@ const Services = () => {
                 industry. simply dummy
               </TextDefault>
 
-              <Button rounded background="#FF4A57" buttonType="secondary" className="button-portfolio-secondary">
+              <Button
+                rounded
+                background="#FF4A57"
+                buttonType="secondary"
+                className="button-portfolio-secondary"
+              >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
             </div>
           </Card>
 
           <Card className="card">
-            <div className="card-body text-start">
+            <div className="card-body text-start p-5">
               <SecondaryText as="span" fontSize="48px" className="fw-bold">
                 <i className="fab fa-html5" />
               </SecondaryText>
 
               <TextDefault as="h4" className="fw-bold mt-4">
-                HTML5 
+                HTML5
               </TextDefault>
 
               <TextDefault as="p" className="text-small mt-4 mb-4">
@@ -69,14 +74,19 @@ const Services = () => {
                 industry. simply dummy
               </TextDefault>
 
-              <Button rounded background="#FF4A57" buttonType="secondary" className="button-portfolio-secondary">
+              <Button
+                rounded
+                background="#FF4A57"
+                buttonType="secondary"
+                className="button-portfolio-secondary"
+              >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
             </div>
           </Card>
 
           <Card className="card">
-            <div className="card-body text-start">
+            <div className="card-body text-start p-5">
               <SecondaryText as="span" fontSize="48px" className="fw-bold">
                 <i className="fab fa-js-square" />
               </SecondaryText>
@@ -90,14 +100,19 @@ const Services = () => {
                 industry. simply dummy
               </TextDefault>
 
-              <Button rounded background="#FF4A57" buttonType="secondary" className="button-portfolio-secondary">
+              <Button
+                rounded
+                background="#FF4A57"
+                buttonType="secondary"
+                className="button-portfolio-secondary"
+              >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
             </div>
           </Card>
 
           <Card className="card">
-            <div className="card-body text-start">
+            <div className="card-body text-start p-5">
               <SecondaryText as="span" fontSize="48px" className="fw-bold">
                 <i className="fab fa-css3" />
               </SecondaryText>
@@ -111,14 +126,19 @@ const Services = () => {
                 industry. simply dummy
               </TextDefault>
 
-              <Button rounded background="#FF4A57" buttonType="secondary" className="button-portfolio-secondary">
+              <Button
+                rounded
+                background="#FF4A57"
+                buttonType="secondary"
+                className="button-portfolio-secondary"
+              >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
             </div>
           </Card>
 
           <Card className="card">
-            <div className="card-body text-start">
+            <div className="card-body text-start p-5">
               <SecondaryText as="span" fontSize="48px" className="fw-bold">
                 <i className="fas fa-mobile" />
               </SecondaryText>
@@ -132,14 +152,19 @@ const Services = () => {
                 industry. simply dummy
               </TextDefault>
 
-              <Button rounded background="#FF4A57" buttonType="secondary" className="button-portfolio-secondary">
+              <Button
+                rounded
+                background="#FF4A57"
+                buttonType="secondary"
+                className="button-portfolio-secondary"
+              >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
             </div>
           </Card>
 
           <Card className="card">
-            <div className="card-body text-start">
+            <div className="card-body text-start p-5">
               <SecondaryText as="span" fontSize="48px" className="fw-bold">
                 <i className="fab fa-node-js" />
               </SecondaryText>
@@ -153,7 +178,12 @@ const Services = () => {
                 industry. simply dummy
               </TextDefault>
 
-              <Button rounded background="#FF4A57" buttonType="secondary" className="button-portfolio-secondary">
+              <Button
+                rounded
+                background="#FF4A57"
+                buttonType="secondary"
+                className="button-portfolio-secondary"
+              >
                 Projects <i className="fas fa-arrow-right ms-2" />
               </Button>
             </div>
