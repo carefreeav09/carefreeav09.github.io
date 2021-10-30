@@ -6,7 +6,6 @@ const Header = () => {
     <Navbar
       title={"Carefreeav"}
       size="md"
-      transparent
       spacing="container"
       navLists={[
         {

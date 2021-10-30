@@ -2,13 +2,12 @@ import Button from "./Button";
 import Card from "./Card";
 import Container from "./Container";
 import Switch from "./Switch";
-import {
-  TextDefault,
-} from "./Texts";
+import { TextDefault, SecondaryText } from "./Texts";
 import Title from "./Title";
-import EmptySpace from './Spacer';
+import EmptySpace from "./Spacer";
 import Code from "./Code";
-import ImageCard from './ImageCard.tsx';
+import Section from "./Section";
+import ImageCard from "./ImageCard.tsx";
 
 export {
   Button,
@@ -17,7 +16,9 @@ export {
   Switch,
   TextDefault,
   Title,
+  SecondaryText,
   EmptySpace,
   Code,
-  ImageCard
+  Section,
+  ImageCard,
 };

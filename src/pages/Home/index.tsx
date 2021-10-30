@@ -1,19 +1,13 @@
 import React from "react";
 import HeroSection from "./Hero";
+import ServiceSection from "./Services";
 
 const Home = () => {
   return (
-    <section
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-        width: "100vw",
-      }}
-    >
+    <>
       <HeroSection />
-    </section>
+      <ServiceSection />
+    </>
   );
 };
 

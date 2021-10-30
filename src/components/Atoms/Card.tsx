@@ -45,9 +45,9 @@ const StyledCard = styled.div<ICard>`
   }
 `;
 
-const Card = ({ children, className }: ICard) => {
+const Card = ({ children, className, shadow, rounded }: ICard) => {
   return (
-    <StyledCard className={`${className}`} shadow rounded>
+    <StyledCard className={`${className}`} shadow={shadow} rounded={rounded}>
       {children}
     </StyledCard>
   );

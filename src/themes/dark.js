@@ -5,6 +5,7 @@ const dark = {
     buttonBackground: "#5E81AC",
 
     textColor: "#f9f9f9",
+    secondaryColor: "#FF4A57",
     buttonColor: "#ECEFF4",
     titleColor: "#FFFFFF",
     mutedColor: "#FFFFFF50",
