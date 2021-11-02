@@ -8,7 +8,8 @@ import EmptySpace from "./Spacer";
 import Code from "./Code";
 import Section from "./Section";
 import ImageCard from "./ImageCard.tsx";
-import Seperator  from "./Seperator";
+import Seperator from "./Seperator";
+import Animations from "./Animations";
 
 export {
   Button,
@@ -22,5 +23,6 @@ export {
   Code,
   Section,
   ImageCard,
-  Seperator
+  Seperator,
+  Animations,
 };
