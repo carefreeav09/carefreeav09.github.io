@@ -8,12 +8,17 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 interface IAnimationProps {
   targetClass: string;
-  animationType?: "fadeInLeft" | "fadeIn" | "fadeInRight" | string;
+  animationType?: "fadeInLeft" | "fadeIn" | "fadeInRight" | "fadeInUp" | string;
   duration?: number | string;
   offset?: number | string;
   triggerHook?: "onEnter" | "onLeave" | number;
   children: any;
   className?: string;
+  tweenOptions?: {
+    from: object;
+    to: object;
+  };
+  delay?: number;
 }
 
 const Animations = ({
@@ -24,14 +29,51 @@ const Animations = ({
   triggerHook,
   children,
   className,
+  tweenOptions,
+  delay,
 }: IAnimationProps) => {
   React.useEffect(() => {
+    
     let controller = new ScrollMagic.Controller();
 
-    let tween = gsap.fromTo(
+    let timeLine = gsap.timeline();
+
+    let animationFromTo: { from: object; to: object } = {
+      from: {},
+      to: {},
+    };
+
+    if (tweenOptions) {
+
+    } else {
+      if (animationType === "fadeInLeft") {
+        animationFromTo = {
+          from: { opacity: 0, x: -1000 },
+          to: { opacity: 1, x: 0, duration: 1, delay: delay },
+        };
+      } else if (animationType === "fadeInRight") {
+        animationFromTo = {
+          from: { opacity: 0, x: 1000 },
+          to: { opacity: 1, x: 0, duration: 1, delay: delay },
+        };
+      } else if (animationType === "fadeInUp") {
+        animationFromTo = {
+          from: { opacity: 0, y: 200 },
+          to: { opacity: 1, y: 0, duration: 1, delay: delay },
+        };
+      } else {
+        animationFromTo = {
+          from: { opacity: 0 },
+          to: { opacity: 1, duration: 1, delay: delay },
+        };
+      }
+    }
+
+    // let timeLine = gsap.timeline();
+    let tween = timeLine.fromTo(
       `.${targetClass}`,
-      { opacity: 0, x: -1000 },
-      { opacity: 1, x: 0, duration: 1 }
+      animationFromTo?.from,
+      animationFromTo?.to
     );
 
     new ScrollMagic.Scene({
@@ -54,6 +96,7 @@ Animations.defaultProps = {
   duration: "100",
   offset: "100",
   triggerHook: 1,
+  delay: 0,
 };
 
 export default Animations;

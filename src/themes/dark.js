@@ -14,6 +14,7 @@ const dark = {
 
     footerBackground: "#EBF4F6",
     footerTextColor: "#1c2540",
+    theme: "dark",
   },
 };
 

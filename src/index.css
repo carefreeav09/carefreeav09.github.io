@@ -37,3 +37,7 @@ body {
   background-color: var(--bs-secondary) !important;
   border-color: var(--bs-secondary);
 }
+
+.progress-bar-secondary {
+  background-color: var(--bs-secondary) !important;
+}

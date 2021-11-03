@@ -4,6 +4,12 @@
   cursor: pointer;
 }
 
+.center-vertically {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .grid-template-1x {
   display: grid;
   grid-template-columns: 1fr;
@@ -15,7 +21,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 }
-
 
 .grid-template-3x {
   display: grid;

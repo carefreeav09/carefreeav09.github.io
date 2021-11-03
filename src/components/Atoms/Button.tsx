@@ -18,7 +18,7 @@ const StyledButton = styled.button<IStyledButtonProps>`
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
   font-weight: 500;
   padding: ${(props) =>
-    props.padding ? `${props.padding}px` : ".625rem 1.5rem .5rem"};
+    props.padding ? `${props.padding}` : ".625rem 1.5rem .5rem"};
   ${(props) =>
     props?.rounded || props?.roundedOutline
       ? "border-radius : 10rem"

@@ -14,6 +14,8 @@ const light = {
 
     footerBackground: "#161c24",
     footerTextColor: "#f9f9f9",
+    theme: "light",
+
   },
 };
 

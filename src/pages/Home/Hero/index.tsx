@@ -10,8 +10,13 @@ const HeroSection = () => {
     <Section
       className="container pb-0 d-flex justify-content-center"
       minHeight="90vh"
+      gradient={{
+        isGradient: true,
+        gradientDark: ["#1b242f", "#161c24"],
+        gradientLight: false,
+      }}
     >
-      <div className="mt-4 mb-3 d-flex justify-content-center align-items-center">
+      <div className="mt-4 mb-3 center-vertically">
         <div>
           <Social
             facebook

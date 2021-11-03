@@ -10,6 +10,7 @@ import Section from "./Section";
 import ImageCard from "./ImageCard.tsx";
 import Seperator from "./Seperator";
 import Animations from "./Animations";
+import ProgressBar from "./ProgressBar";
 
 export {
   Button,
@@ -25,4 +26,5 @@ export {
   ImageCard,
   Seperator,
   Animations,
+  ProgressBar
 };
