@@ -13,4 +13,9 @@ const fetchIndividualPosts = async (id: number) => {
   return response.data;
 };
 
-export { fetchAllPosts, fetchIndividualPosts };
+const fetchAllImages = async () => {
+  const response = await axios.get(`https://picsum.photos/v2/list?limit=6`);
+  return response.data;
+};
+
+export { fetchAllPosts, fetchIndividualPosts, fetchAllImages };
