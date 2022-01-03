@@ -20,6 +20,7 @@ interface ISocialProfiles {
   showMessage?: boolean;
   position?: string;
   classNames?: string;
+  iconsClassNames?: string;
 }
 
 const Social = (props: ISocialProfiles) => {
@@ -33,6 +34,7 @@ const Social = (props: ISocialProfiles) => {
     showMessage,
     position,
     classNames,
+    iconsClassNames,
   } = props;
   return (
     <section
@@ -49,7 +51,7 @@ const Social = (props: ISocialProfiles) => {
       <div>
         {facebook && (
           <a
-            className="me-4 text-reset"
+            className={`me-4 text-reset ${iconsClassNames}`}
             href={FACEBOOK_URL}
             target="_blank"
             rel="noreferrer"
@@ -60,7 +62,7 @@ const Social = (props: ISocialProfiles) => {
 
         {twitter && (
           <a
-            className="me-4 text-reset"
+            className={`me-4 text-reset ${iconsClassNames}`}
             href={TWITTER_URL}
             target="_blank"
             rel="noreferrer"
@@ -71,7 +73,7 @@ const Social = (props: ISocialProfiles) => {
 
         {instagram && (
           <a
-            className="me-4 text-reset"
+            className={`me-4 text-reset ${iconsClassNames}`}
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noreferrer"
@@ -82,7 +84,7 @@ const Social = (props: ISocialProfiles) => {
 
         {linkedin && (
           <a
-            className="me-4 text-reset"
+            className={`me-4 text-reset ${iconsClassNames}`}
             href={LINKEDIN_URL}
             target="_blank"
             rel="noreferrer"
@@ -93,7 +95,7 @@ const Social = (props: ISocialProfiles) => {
 
         {github && (
           <a
-            className="me-4 text-reset"
+            className={`me-4 text-reset ${iconsClassNames}`}
             href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
@@ -104,7 +106,7 @@ const Social = (props: ISocialProfiles) => {
 
         {youtube && (
           <a
-            className="me-4 text-reset"
+            className={`me-4 text-reset ${iconsClassNames}`}
             href={YOUTUBE_URL}
             target="_blank"
             rel="noreferrer"

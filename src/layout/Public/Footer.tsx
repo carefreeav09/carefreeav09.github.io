@@ -19,7 +19,7 @@ const MainFooter = (props: any) => {
                 CarefreeAV
               </h6>
               <p>
-                React JS developer from Nepal with ADHD. I am a passionate about
+                React JS developer from Nepal. I am a passionate about
                 doing frontend things.
               </p>
             </div>

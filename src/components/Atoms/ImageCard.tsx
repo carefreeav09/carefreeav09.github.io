@@ -8,12 +8,53 @@ interface IImageCard {
   featuredImage: string;
   height?: number;
   width?: number;
+  cardWidth?: string;
+  className?: string;
+  link?: string;
+  rounded?: boolean;
 }
 
-const ImageCardEl = styled.div`
+const ImageCardEl = styled.div<IImageCard>`
   position: relative;
   text-align: left;
-  border-radius: 20px;
+  border-radius: ${(props) => (props.rounded ? "20px" : "0px")};
+  width: ${(props) => props.cardWidth};
+  margin: auto;
+
+  .bg-image {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 20px;
+  }
+
+  .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mask:hover {
+    background: #00000080;
+    transition: background 0.3s ease-in-out;
+
+    .bottom-right {
+      .title {
+        display: contents;
+        z-index: 1;
+      }
+    }
+  }
 
   img {
     border-radius: 20px;
@@ -29,31 +70,46 @@ const ImageCardEl = styled.div`
       font-size: 22px;
       font-weight: bold;
       text-transform: uppercase;
+      opacity: 0;
     }
   }
 `;
 
-const ImageCard = ({ title, featuredImage, height, width }: IImageCard) => {
+const ImageCard = ({
+  title,
+  featuredImage,
+  height,
+  width,
+  cardWidth,
+  className,
+  link,
+}: IImageCard) => {
   return (
-    <ImageCardEl className="card">
-      <img src={featuredImage} alt="Snow" height={height} width={width} />
-      <div className="bottom-right">
-        <TextDefault className="title" as="p">
-          {console.log(title, "image")}
-          {title}
-        </TextDefault>
-
-        <TextDefault className="paragraph" as="p">
-          {/* {description} */}
-        </TextDefault>
-      </div>
+    <ImageCardEl
+      className={`${className}`}
+      title={title}
+      featuredImage={featuredImage}
+      cardWidth={cardWidth}
+    >
+      <a href={link ? link : "#"} target={"_blank"} rel="noreferrer">
+        <div className="bg-image">
+          <img src={featuredImage} alt="Snow" height={height} width={width} />
+          <div className="mask">
+            <div className="bottom-right">
+              <TextDefault className="title" as="p">
+                {title}
+              </TextDefault>
+            </div>
+          </div>
+        </div>
+      </a>
     </ImageCardEl>
   );
 };
 
 ImageCard.defaultProps = {
-  height: 400,
-  width: '100%'
+  width: "100%",
+  // cardWidth: "50%",
 };
 
 export default ImageCard;

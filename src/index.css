@@ -38,6 +38,10 @@ body {
   border-color: var(--bs-secondary);
 }
 
+.app-secondary-text {
+  color: var(--bs-secondary) !important;
+}
+
 .progress-bar-secondary {
   background-color: var(--bs-secondary) !important;
 }
