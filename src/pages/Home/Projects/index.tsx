@@ -91,14 +91,12 @@ const Projects = () => {
           </Tab>
 
           <Tab name="Mobile Apps" tabKey="profile">
-            <div className="container d-grid grid-template-3x">
+            <div className="container d-grid grid-template-4x">
               <ImageCard
                 featuredImage={Humanitas}
                 alt="HU Alumni"
                 title="HU Alumni"
                 height="300"
-                rounded
-                cardWidth="50%"
               />
 
               <ImageCard
@@ -106,8 +104,6 @@ const Projects = () => {
                 alt="MyAsma"
                 title="MyAsma"
                 height="300"
-                rounded
-                cardWidth="50%"
               />
 
               <ImageCard
@@ -115,8 +111,6 @@ const Projects = () => {
                 alt="Variety"
                 title="Variety"
                 height="300"
-                rounded
-                cardWidth="50%"
               />
 
               <ImageCard
@@ -124,8 +118,6 @@ const Projects = () => {
                 alt="MySwayambar"
                 title="MySwayambar"
                 height="300"
-                rounded
-                cardWidth="50%"
               />
             </div>
           </Tab>

@@ -4,7 +4,7 @@ import React from "react";
 const AppThemeContext = React.createContext();
 
 const ThemeContextProvider = (props) => {
-  const [theme, setTheme] = React.useState("dark");
+  const [theme, setTheme] = React.useState("light");
 
   const [appLayout, setAppLayout] = React.useState({
     size: "0px",

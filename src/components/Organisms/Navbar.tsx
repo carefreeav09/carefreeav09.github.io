@@ -184,8 +184,8 @@ const Navbar = ({
             <div className="d-flex input-group w-auto mt-1">
               <Switch
                 handleSwitch={switchTheme}
-                trueValue="light"
-                falseValue="dark"
+                trueValue="dark"
+                falseValue="light"
               />
             </div>
           </ul>

@@ -15,6 +15,8 @@ const AsyncBlogs = loadable(() => import("../pages/Blogs"));
 const AsyncBlogIndividual = loadable(() => import("../pages/Blogs/Individual"));
 const NotFound = loadable(() => import("../pages/NotFound"));
 
+const AsyncContact = loadable(() => import("../pages/Contact"));
+
 const App = () => {
   return (
     <Switch>
@@ -42,6 +44,13 @@ const App = () => {
         path={`/blog/:id/:slug`}
         exact
         component={AsyncBlogIndividual}
+        layout={PublicLayout}
+      />
+
+      <Public
+        path={`/contact`}
+        exact
+        component={AsyncContact}
         layout={PublicLayout}
       />
 
