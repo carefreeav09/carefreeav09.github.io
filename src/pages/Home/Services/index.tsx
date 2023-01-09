@@ -1,3 +1,4 @@
+import React from "react";
 import {
   TextDefault,
   SecondaryText,
@@ -7,8 +8,10 @@ import {
   Seperator,
   Animations,
 } from "../../../components";
+import { AppThemeContext } from "../../../context/ThemeContext";
 
 const Services = () => {
+  const { appBaseColor } = React.useContext(AppThemeContext);
   return (
     <Section
       className="container py-5 px-5 center-vertically text-center"
@@ -62,7 +65,7 @@ const Services = () => {
 
                 <Button
                   rounded
-                  background="#FF4A57"
+                  background={appBaseColor}
                   buttonType="secondary"
                   className="button-portfolio-secondary"
                   padding="0.5 1rem"
@@ -91,7 +94,7 @@ const Services = () => {
 
                 <Button
                   rounded
-                  background="#FF4A57"
+                  background={appBaseColor}
                   buttonType="secondary"
                   className="button-portfolio-secondary"
                   padding="0.5 1rem"
@@ -120,7 +123,7 @@ const Services = () => {
 
                 <Button
                   rounded
-                  background="#FF4A57"
+                  background={appBaseColor}
                   buttonType="secondary"
                   className="button-portfolio-secondary"
                   padding="0.5 1rem"
@@ -149,7 +152,7 @@ const Services = () => {
 
                 <Button
                   rounded
-                  background="#FF4A57"
+                  background={appBaseColor}
                   buttonType="secondary"
                   className="button-portfolio-secondary"
                   padding="0.5 1rem"
@@ -178,7 +181,7 @@ const Services = () => {
 
                 <Button
                   rounded
-                  background="#FF4A57"
+                  background={appBaseColor}
                   buttonType="secondary"
                   className="button-portfolio-secondary"
                   padding="0.5 1rem"
@@ -207,7 +210,7 @@ const Services = () => {
 
                 <Button
                   rounded
-                  background="#FF4A57"
+                  background={appBaseColor}
                   buttonType="secondary"
                   className="button-portfolio-secondary"
                   padding="0.5 1rem"

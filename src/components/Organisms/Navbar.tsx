@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { SketchPicker } from "react-color";
 import { AppThemeContext } from "../../context/ThemeContext";
 import Switch from "../Atoms/Switch";
 
@@ -33,8 +34,16 @@ const Navbar = ({
   fixed,
   size,
 }: NavbarProps) => {
-  const { setTransparency, setSize, switchTheme, theme } =
-    React.useContext(AppThemeContext);
+  const {
+    setTransparency,
+    setSize,
+    switchTheme,
+    theme,
+    setAppBaseColor,
+    appBaseColor,
+  } = React.useContext(AppThemeContext);
+
+  const [showPicker, setShowPicker] = React.useState(false);
 
   const getNavSize = () => {
     switch (size) {
@@ -182,6 +191,44 @@ const Navbar = ({
             ))}
 
             <div className="d-flex input-group w-auto mt-1">
+              <li className={`nav-item`}>
+                <span className="nav-link cursor-pointer p-0">
+                  <div
+                    className={"nav-link"}
+                    role="button"
+                    aria-expanded="false"
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      backgroundColor: appBaseColor,
+                      borderRadius: "50%",
+                      marginLeft: "10px",
+                      marginRight: "10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setShowPicker(!showPicker)}
+                  />
+
+                  {showPicker && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        zIndex: 999,
+                        right: 0,
+                      }}
+                    >
+                      <SketchPicker
+                        color={appBaseColor}
+                        onChangeComplete={(hex: any) => {
+                          setAppBaseColor(hex.hex);
+                          setShowPicker(false);
+                        }}
+                      />
+                    </div>
+                  )}
+                </span>
+              </li>
+
               <Switch
                 handleSwitch={switchTheme}
                 trueValue="light"

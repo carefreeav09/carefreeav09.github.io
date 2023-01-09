@@ -10,7 +10,8 @@ interface ISeperatorProps {
 
 const Seperator = styled.p<ISeperatorProps>`
   border-width: ${(props) => props.borderWidth};
-  border-color: ${(props) => props.borderColor};
+  border-color: ${(props) =>
+    props.borderColor || props.theme.colors.secondaryColor};
   border-style: ${(props) => props.borderStyle};
   width: ${(props) => props.width};
   margin: ${(props) => props.margin};
@@ -18,7 +19,6 @@ const Seperator = styled.p<ISeperatorProps>`
 
 Seperator.defaultProps = {
   borderWidth: "3px",
-  borderColor: "#FF4A57",
   borderStyle: "solid",
   width: "6%",
   margin: "2rem auto",

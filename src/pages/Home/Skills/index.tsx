@@ -7,8 +7,10 @@ import {
   Button,
   ProgressBar,
 } from "../../../components";
+import { AppThemeContext } from "../../../context/ThemeContext";
 
 const Skills = () => {
+  const { appBaseColor } = React.useContext(AppThemeContext);
   return (
     <Section
       className="py-5 center-vertically"
@@ -52,7 +54,7 @@ const Skills = () => {
 
           <Button
             rounded
-            background="#FF4A57"
+            background={appBaseColor}
             buttonType="secondary"
             className="button-portfolio-secondary mt-4"
             padding="0.5rem 2.5rem"

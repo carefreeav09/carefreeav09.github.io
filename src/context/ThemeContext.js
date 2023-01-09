@@ -5,6 +5,7 @@ const AppThemeContext = React.createContext();
 
 const ThemeContextProvider = (props) => {
   const [theme, setTheme] = React.useState("dark");
+  const [appBaseColor, setAppBaseColor] = React.useState("#FF4A57");
 
   const [appLayout, setAppLayout] = React.useState({
     size: "0px",
@@ -31,7 +32,15 @@ const ThemeContextProvider = (props) => {
 
   return (
     <AppThemeContext.Provider
-      value={{ appLayout, theme, switchTheme, setSize, setTransparency }}
+      value={{
+        appLayout,
+        theme,
+        appBaseColor,
+        switchTheme,
+        setSize,
+        setTransparency,
+        setAppBaseColor,
+      }}
     >
       {props.children}
     </AppThemeContext.Provider>

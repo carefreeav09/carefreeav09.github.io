@@ -22,7 +22,7 @@ const TabsStyled = styled.ul`
     }
 
     button.active {
-      background-color: var(--bs-secondary) !important;
+      background-color: ${(props) => props.theme.colors.secondaryColor};
       border-color: var(--bs-secondary);
     }
   }

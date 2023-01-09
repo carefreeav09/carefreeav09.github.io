@@ -19,7 +19,7 @@ const StyledProgressBar = styled.div`
   margin-bottom: 0.5rem;
 
   .progress-bar {
-    background-color: #ff4a57;
+    background-color: ${(props) => props.theme.colors.secondaryColor};
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -8,6 +8,7 @@ import {
   LINKEDIN_URL,
   GITHUB_URL,
 } from "../../constants";
+import { AppThemeContext } from "../../context/ThemeContext";
 
 interface ISocialProfiles {
   container?: boolean;
@@ -24,6 +25,7 @@ interface ISocialProfiles {
 }
 
 const Social = (props: ISocialProfiles) => {
+  const { appBaseColor } = React.useContext(AppThemeContext);
   const {
     facebook,
     twitter,
@@ -51,8 +53,9 @@ const Social = (props: ISocialProfiles) => {
       <div>
         {facebook && (
           <a
-            className={`me-4 text-reset ${iconsClassNames}`}
+            className={`me-4 ${iconsClassNames}`}
             href={FACEBOOK_URL}
+            style={{ color: appBaseColor }}
             target="_blank"
             rel="noreferrer"
           >
@@ -62,8 +65,9 @@ const Social = (props: ISocialProfiles) => {
 
         {twitter && (
           <a
-            className={`me-4 text-reset ${iconsClassNames}`}
+            className={`me-4 ${iconsClassNames}`}
             href={TWITTER_URL}
+            style={{ color: appBaseColor }}
             target="_blank"
             rel="noreferrer"
           >
@@ -73,8 +77,9 @@ const Social = (props: ISocialProfiles) => {
 
         {instagram && (
           <a
-            className={`me-4 text-reset ${iconsClassNames}`}
+            className={`me-4 ${iconsClassNames}`}
             href={INSTAGRAM_URL}
+            style={{ color: appBaseColor }}
             target="_blank"
             rel="noreferrer"
           >
@@ -84,8 +89,9 @@ const Social = (props: ISocialProfiles) => {
 
         {linkedin && (
           <a
-            className={`me-4 text-reset ${iconsClassNames}`}
+            className={`me-4 ${iconsClassNames}`}
             href={LINKEDIN_URL}
+            style={{ color: appBaseColor }}
             target="_blank"
             rel="noreferrer"
           >
@@ -95,8 +101,9 @@ const Social = (props: ISocialProfiles) => {
 
         {github && (
           <a
-            className={`me-4 text-reset ${iconsClassNames}`}
+            className={`me-4 ${iconsClassNames}`}
             href={GITHUB_URL}
+            style={{ color: appBaseColor }}
             target="_blank"
             rel="noreferrer"
           >
@@ -106,8 +113,9 @@ const Social = (props: ISocialProfiles) => {
 
         {youtube && (
           <a
-            className={`me-4 text-reset ${iconsClassNames}`}
+            className={`me-4 ${iconsClassNames}`}
             href={YOUTUBE_URL}
+            style={{ color: appBaseColor }}
             target="_blank"
             rel="noreferrer"
           >

@@ -23,6 +23,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
 }
+
 body {
   font-family: "Nunito Sans", sans-serif !important;
 }
@@ -33,15 +34,10 @@ body {
   position: relative;
 }
 
-.button-portfolio-secondary {
-  background-color: var(--bs-secondary) !important;
-  border-color: var(--bs-secondary);
-}
+.button-portfolio-secondary {}
 
 .app-secondary-text {
   color: var(--bs-secondary) !important;
 }
 
-.progress-bar-secondary {
-  background-color: var(--bs-secondary) !important;
-}
+.progress-bar-secondary {}
