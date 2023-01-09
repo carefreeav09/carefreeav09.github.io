@@ -6,14 +6,11 @@ import {
   Card,
   Seperator,
   Animations,
-  Button,
 } from "../../../components";
-import { AppThemeContext } from "../../../context/ThemeContext";
 
 import "./service.styles.css";
 
 const Services = () => {
-  const { appBaseColor } = React.useContext(AppThemeContext);
   return (
     <Section
       className="container py-5 px-5 center-vertically text-center"
