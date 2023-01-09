@@ -16,21 +16,6 @@ const GlobalStyle = createGlobalStyle`
 
 const Theme = ({ children }) => {
   const { theme, appBaseColor } = useContext(AppThemeContext);
-  console.log(dark, "dark");
-  console.log(
-    appBaseColor,
-    "app base color",
-    theme,
-    "theme",
-    {
-      ...dark,
-      colors: {
-        ...dark.colors,
-        secondaryColor: appBaseColor,
-      },
-    },
-    "dark theme"
-  );
 
   return (
     <ThemeProvider
