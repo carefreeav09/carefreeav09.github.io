@@ -27,7 +27,7 @@ const ImageCardEl = styled.div<IImageCard>`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-    border-radius: 20px;
+    border-radius: ${(props) => (props.rounded ? "20px" : "0px")};
   }
 
   .mask {
@@ -57,7 +57,7 @@ const ImageCardEl = styled.div<IImageCard>`
   }
 
   img {
-    border-radius: 20px;
+    border-radius: ${(props) => (props.rounded ? "20px" : "0px")};
   }
 
   .bottom-right {

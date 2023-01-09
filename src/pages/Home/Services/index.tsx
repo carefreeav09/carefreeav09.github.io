@@ -4,11 +4,13 @@ import {
   SecondaryText,
   Section,
   Card,
-  Button,
   Seperator,
   Animations,
+  Button,
 } from "../../../components";
 import { AppThemeContext } from "../../../context/ThemeContext";
+
+import "./service.styles.css";
 
 const Services = () => {
   const { appBaseColor } = React.useContext(AppThemeContext);
@@ -46,9 +48,9 @@ const Services = () => {
           <Seperator />
         </Animations>
 
-        <div className="container d-grid grid-template-3x mt-5">
+        <div className="container d-grid grid-template-2x mt-5">
           <Animations targetClass="service-cards-1">
-            <Card className="card">
+            <Card className="card services-card">
               <div className="card-body text-start p-5">
                 <SecondaryText as="span" fontSize="48px" className="fw-bold">
                   <i className="fab fa-react" />
@@ -58,113 +60,23 @@ const Services = () => {
                   React JS
                 </TextDefault>
 
-                <TextDefault as="p" className="text-small mt-4 mb-4">
-                  Lorem Ipsum is simply dummy text of the printing typesetting
-                  industry. simply dummy
+                <TextDefault as="p" className=" mt-2 mb-2">
+                  <strong> Experience </strong>: 3 years.
                 </TextDefault>
-
-                <Button
-                  rounded
-                  background={appBaseColor}
-                  buttonType="secondary"
-                  className="button-portfolio-secondary"
-                  padding="0.5 1rem"
-                >
-                  Projects <i className="fas fa-arrow-right ms-2" />
-                </Button>
+                <TextDefault as="p" className=" mt-2 mb-2">
+                  <strong>Organizations </strong>: Touchware Nepal/ KOTUKO IT,
+                  Citytech Nepal
+                </TextDefault>
+                <TextDefault as="p" className=" mt-2">
+                  <strong>Projects </strong>: Antelope Nepal, RemitPulse, COS
+                  Milano
+                </TextDefault>
               </div>
             </Card>
           </Animations>
 
           <Animations targetClass="service-cards-2">
-            <Card className="card">
-              <div className="card-body text-start p-5">
-                <SecondaryText as="span" fontSize="48px" className="fw-bold">
-                  <i className="fab fa-html5" />
-                </SecondaryText>
-
-                <TextDefault as="h4" className="fw-bold mt-4">
-                  HTML5
-                </TextDefault>
-
-                <TextDefault as="p" className="text-small mt-4 mb-4">
-                  Lorem Ipsum is simply dummy text of the printing typesetting
-                  industry. simply dummy
-                </TextDefault>
-
-                <Button
-                  rounded
-                  background={appBaseColor}
-                  buttonType="secondary"
-                  className="button-portfolio-secondary"
-                  padding="0.5 1rem"
-                >
-                  Projects <i className="fas fa-arrow-right ms-2" />
-                </Button>
-              </div>
-            </Card>
-          </Animations>
-
-          <Animations targetClass="service-cards-3">
-            <Card className="card">
-              <div className="card-body text-start p-5">
-                <SecondaryText as="span" fontSize="48px" className="fw-bold">
-                  <i className="fab fa-js-square" />
-                </SecondaryText>
-
-                <TextDefault as="h4" className="fw-bold mt-4">
-                  Javascript Frameworks
-                </TextDefault>
-
-                <TextDefault as="p" className="text-small mt-4 mb-4">
-                  Lorem Ipsum is simply dummy text of the printing typesetting
-                  industry. simply dummy
-                </TextDefault>
-
-                <Button
-                  rounded
-                  background={appBaseColor}
-                  buttonType="secondary"
-                  className="button-portfolio-secondary"
-                  padding="0.5 1rem"
-                >
-                  Projects <i className="fas fa-arrow-right ms-2" />
-                </Button>
-              </div>
-            </Card>
-          </Animations>
-
-          <Animations targetClass="service-cards-4">
-            <Card className="card">
-              <div className="card-body text-start p-5">
-                <SecondaryText as="span" fontSize="48px" className="fw-bold">
-                  <i className="fab fa-css3" />
-                </SecondaryText>
-
-                <TextDefault as="h4" className="fw-bold mt-4">
-                  CSS3 / UI Library
-                </TextDefault>
-
-                <TextDefault as="p" className="text-small mt-4 mb-4">
-                  Lorem Ipsum is simply dummy text of the printing typesetting
-                  industry. simply dummy
-                </TextDefault>
-
-                <Button
-                  rounded
-                  background={appBaseColor}
-                  buttonType="secondary"
-                  className="button-portfolio-secondary"
-                  padding="0.5 1rem"
-                >
-                  Projects <i className="fas fa-arrow-right ms-2" />
-                </Button>
-              </div>
-            </Card>
-          </Animations>
-
-          <Animations targetClass="service-cards-5">
-            <Card className="card">
+            <Card className="card services-card">
               <div className="card-body text-start p-5">
                 <SecondaryText as="span" fontSize="48px" className="fw-bold">
                   <i className="fas fa-mobile" />
@@ -174,20 +86,68 @@ const Services = () => {
                   React Native Apps
                 </TextDefault>
 
-                <TextDefault as="p" className="text-small mt-4 mb-4">
-                  Lorem Ipsum is simply dummy text of the printing typesetting
-                  industry. simply dummy
+                <TextDefault as="p" className=" mt-2 mb-2">
+                  <strong> Experience </strong>: 1.5 years.
+                </TextDefault>
+                <TextDefault as="p" className=" mt-2 mb-2">
+                  <strong>Organizations </strong>: Touchware Nepal/ KOTUKO IT,
+                  MySwayambar
+                </TextDefault>
+                <TextDefault as="p" className="mt-2">
+                  <strong>Projects </strong>: HU Alumni, MyAsma, MySwayambar,
+                  Variety
+                </TextDefault>
+              </div>
+            </Card>
+          </Animations>
+        </div>
+
+        <div className="container d-grid grid-template-3x mt-5">
+          <Animations targetClass="service-cards-3">
+            <Card className="card services-card">
+              <div className="card-body text-start p-5">
+                <SecondaryText as="span" fontSize="48px" className="fw-bold">
+                  <i className="fab fa-js-square" />
+                </SecondaryText>
+
+                <TextDefault as="h4" className="fw-bold mt-4">
+                  Javascript Frameworks
                 </TextDefault>
 
-                <Button
-                  rounded
-                  background={appBaseColor}
-                  buttonType="secondary"
-                  className="button-portfolio-secondary"
-                  padding="0.5 1rem"
-                >
-                  Projects <i className="fas fa-arrow-right ms-2" />
-                </Button>
+                <TextDefault as="p" className=" mt-2 mb-2">
+                  <strong>Angular JS </strong>: Beginner
+                </TextDefault>
+                <TextDefault as="p" className=" mt-2 mb-2">
+                  <strong>Vue JS </strong>: Beginner
+                </TextDefault>
+                <TextDefault as="p" className=" mt-2">
+                  <strong>Ionic </strong>: Intermediate
+                </TextDefault>
+              </div>
+            </Card>
+          </Animations>
+
+          <Animations targetClass="service-cards-4">
+            <Card className="card services-card">
+              <div className="card-body text-start p-5">
+                <SecondaryText as="span" fontSize="48px" className="fw-bold">
+                  <i className="fab fa-css3" />
+                </SecondaryText>
+
+                <TextDefault as="h4" className="fw-bold mt-4">
+                  HTML5 / CSS3 / UI Library
+                </TextDefault>
+
+                <TextDefault as="p" className=" mt-2 mb-2">
+                  <strong>HTML5 </strong>: Veteran
+                </TextDefault>
+                <TextDefault as="p" className=" mt-2 mb-2">
+                  <strong>CSS3 </strong>: Verteran
+                </TextDefault>
+                <TextDefault as="p" className=" mt-2">
+                  <strong>UI Libraries </strong>: Material UI, Material Design
+                  Bootstrap, Bootstrap 5
+                </TextDefault>
               </div>
             </Card>
           </Animations>
@@ -203,20 +163,9 @@ const Services = () => {
                   Node JS / Express
                 </TextDefault>
 
-                <TextDefault as="p" className="text-small mt-4 mb-4">
-                  Lorem Ipsum is simply dummy text of the printing typesetting
-                  industry. simply dummy
+                <TextDefault as="p" className=" mt-2 mb-2">
+                  <strong>NodeJS </strong>: Intermediate
                 </TextDefault>
-
-                <Button
-                  rounded
-                  background={appBaseColor}
-                  buttonType="secondary"
-                  className="button-portfolio-secondary"
-                  padding="0.5 1rem"
-                >
-                  Projects <i className="fas fa-arrow-right ms-2" />
-                </Button>
               </div>
             </Card>
           </Animations>

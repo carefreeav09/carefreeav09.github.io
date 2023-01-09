@@ -231,8 +231,8 @@ const Navbar = ({
 
               <Switch
                 handleSwitch={switchTheme}
-                trueValue="light"
-                falseValue="dark"
+                trueValue="dark"
+                falseValue="light"
               />
             </div>
           </ul>
